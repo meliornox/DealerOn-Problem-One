@@ -1,0 +1,8 @@
+#Ignore files specified in the instructions
+*.exe
+*.msi
+*.dll
+
+#Ignore build results
+bin/
+obj/
