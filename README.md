@@ -4,8 +4,8 @@
 
 I'm using .NET on Fedora. I used the command line to run and test the solution, so these instructions use the command line.
 
-Run the project using `<dotnet run>` in the MarsRover folder.
-Test the project using `<dotnet test>` in the main folder.
+Run the project using `dotnet run` in the MarsRover folder.
+Test the project using `dotnet test` in the main folder.
 
 When using the command line to give inputs, the rovers will execute their instructions once there is no data for the next rover's position and heading.
 
@@ -35,8 +35,8 @@ When using the command line to give inputs, the rovers will execute their instru
 
 ### Design
 
-The problem is very clear about the restrictions on the headings of the rovers and the instructions that can be given to them. I made two enum types, `<Direction>` and Instruction>`, to restrict them to their valid values.
+The problem is very clear about the restrictions on the headings of the rovers and the instructions that can be given to them. I made two enum types, `Direction` and Instruction>`, to restrict them to their valid values.
 
-The input validation took up a disproportionate amount of `<main()>` so I split it into two methods. `<ParseFirstInput()>` validates the first line and provides the plateau grid. `<ParseNextInput()>` validates the following rover-instructions pairs and provides a list of rovers and a list of instructions through two of the parameters. ParseNextInput leaves some of the validation to the Rover class using try-catch blocks.
+The input validation took up a disproportionate amount of `main()` so I split it into two methods. `ParseFirstInput()` validates the first line and provides the plateau grid. `ParseNextInput()` validates the following rover-instructions pairs and provides a list of rovers and a list of instructions through two of the parameters. ParseNextInput leaves some of the validation to the Rover class using try-catch blocks.
 
-Once the input is parsed into lists, `<main()>` iterates through them and directs each rover to move in turn according to the instructions. Each rover has a grid it navigates on, an X position on the grid, a Y position on the grid, and a heading. The rover class validates the information given to its constructor and setters to ensure expected behavior. Rovers can turn and move on the grid with the `<Navigate()>` method, and they will make sure to stay within the bounds and not run into other rovers.
+Once the input is parsed into lists, `main()` iterates through them and directs each rover to move in turn according to the instructions. Each rover has a grid it navigates on, an X position on the grid, a Y position on the grid, and a heading. The rover class validates the information given to its constructor and setters to ensure expected behavior. Rovers can turn and move on the grid with the `Navigate()` method, and they will make sure to stay within the bounds and not run into other rovers.
