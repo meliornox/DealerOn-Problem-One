@@ -1,35 +1,39 @@
+#DealerOn Problem One: Mars Rover
 
---Instructions--
-I'm using .NET on Fedora. I used the command line to run and test the solution, so my instructions use the command line.
+###Instructions
+
+I'm using .NET on Fedora. I used the command line to run and test the solution, so these instructions use the command line.
 
 Run the project using "dotnet run" in the MarsRover folder.
 Test the project using "dotnet test" in the main folder.
 
 When using the command line to give inputs, the rovers will execute their instructions once there is no data for the next rover's position and heading.
 
---Assumptions--
+##A Brief Explanation of My Design and Assumptions
 
-All the provided information will be added line-by-line.
+###Assumptions
 
-The rovers should execute their instructions once all instructions were received for all rovers.
+* All the provided information will be added line-by-line.
 
-The input will not necessarily be pre-validated.
+* The rovers should execute their instructions once all instructions were received for all rovers.
 
-Rovers should not overlap, whether when navigating or when confirming location. 
+* The input will not necessarily be pre-validated.
 
-When navigating rovers should stay within the boundaries of the plateau.
+* Rovers should not overlap, whether when navigating or when confirming location. 
 
-No extra output should be given for valid input.
+* When navigating rovers should stay within the boundaries of the plateau.
 
-The instructions for a rover can be blank.
+* No extra output should be given for valid input.
 
-There can be any number of rover-instructions pairs.
+* The instructions for a rover can be blank.
 
-The Rover class should be fully implemented with setters even though no setters are used in the solution.
+* There can be any number of rover-instructions pairs.
 
-Rather than generating errors, rovers should skip invalid instructions and not move when they would run over another rover or move out of bounds, continuing with execution.
+* The Rover class should be fully implemented with setters even though no setters are used in the solution.
 
---Design--
+* Rather than generating errors, rovers should skip invalid instructions and not move when they would run over another rover or move out of bounds, continuing with execution.
+
+###Design
 
 The problem is very clear about the restrictions on the headings of the rovers and the instructions that can be given to them. I made two enum types, Direction and Instruction, to restrict them to their valid values.
 
