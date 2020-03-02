@@ -1,6 +1,6 @@
-#DealerOn Problem One: Mars Rover
+# DealerOn Problem One: Mars Rover
 
-###Instructions
+### Instructions
 
 I'm using .NET on Fedora. I used the command line to run and test the solution, so these instructions use the command line.
 
@@ -9,9 +9,9 @@ Test the project using "dotnet test" in the main folder.
 
 When using the command line to give inputs, the rovers will execute their instructions once there is no data for the next rover's position and heading.
 
-##A Brief Explanation of My Design and Assumptions
+## A Brief Explanation of My Design and Assumptions
 
-###Assumptions
+### Assumptions
 
 * All the provided information will be added line-by-line.
 
@@ -33,7 +33,7 @@ When using the command line to give inputs, the rovers will execute their instru
 
 * Rather than generating errors, rovers should skip invalid instructions and not move when they would run over another rover or move out of bounds, continuing with execution.
 
-###Design
+### Design
 
 The problem is very clear about the restrictions on the headings of the rovers and the instructions that can be given to them. I made two enum types, Direction and Instruction, to restrict them to their valid values.
 
